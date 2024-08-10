@@ -27,8 +27,16 @@
           <button id="add-histograph">Rating Distribution</button>
           <button id="add-circle-graph">Rating of Players</button>
         </div>
+
         <div class="chart-wrapper"></div>
+<div class="zoom-controls">
+    <button id="reset-zoom">Reset</button>
+    <input type="range" id="zoom-slider" min="70" max="110" value="100">
+    <span id="zoom-percentage">100%</span>
+  </div>
+
       </div>
+
       <div class="calculation-section">
         <h2>Calculate Rating(1-10):</h2>
         <div id="input-container">
@@ -41,12 +49,15 @@
         </div>
       </div>
     </div>
+
   </main>
   <footer>
     <div class="github-link">
-      <a href="https://github.com/GudiDheeraj/Dissertation-" target="_blank" class="github-button">View Project</a>
+      
+      <a href="https://github.com/GudiDheeraj/dissertation" target="_blank" class="github-button">View Project</a>
     </div>
   </footer>
+
   <script src="./main.js"></script>
 </body>
 </html>
