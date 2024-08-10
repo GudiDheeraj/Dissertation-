@@ -186,6 +186,29 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     calculateBowler();
   }
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const zoomSlider = document.getElementById('zoom-slider');
+  const zoomPercentage = document.getElementById('zoom-percentage');
+  const resetZoom = document.getElementById('reset-zoom');
+  const chartWrapper = document.querySelector('.chart-wrapper');
+
+  // Function to apply zoom
+  function applyZoom(scale) {
+    chartWrapper.style.transform = `scale(${scale / 100})`;
+    zoomPercentage.textContent = `${scale}%`;
+  }
+
+  // Handle slider change
+  zoomSlider.addEventListener('input', function() {
+    applyZoom(this.value);
+  });
+
+  // Handle reset button click
+  resetZoom.addEventListener('click', function() {
+    zoomSlider.value = 100;
+    applyZoom(100);
+  });
+});
 
 // Initialize the page with batsman inputs and the first graph
 document.addEventListener('DOMContentLoaded', function() {
