@@ -25,7 +25,7 @@ body {
   flex-direction: column;
 }
 .zoom-controls {
-
+  display: flex;
   align-items: right;
   margin-bottom: 5px;
 
